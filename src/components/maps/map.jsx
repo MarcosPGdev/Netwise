@@ -27,7 +27,7 @@ const MapComponent = ({ location }) => {
             { !location ? (
                 <div>Ubicación sin definir</div>
             ) : (
-                <LoadScript googleMapsApiKey="AIzaSyADYcElzhK4c_FjBZc6Jx_6cfm4sWwzJew">
+                <LoadScript googleMapsApiKey="">
                     <GoogleMap
                         mapContainerStyle={containerStyle}
                         center={selectedLocation}
