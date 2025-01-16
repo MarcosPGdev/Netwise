@@ -1,0 +1,23 @@
+.lenguagesContainer{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    gap: .3rem;
+    max-height: max-content;
+}
+
+.lenguagesContainer div{
+    background: var(--gradient-primary);
+    padding: .4rem;
+    font-weight: 500;
+    border-radius: 10px;
+    color: rgb(var(--color-white));
+    display: flex;
+    margin: 0px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+}

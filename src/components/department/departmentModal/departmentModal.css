@@ -1,0 +1,40 @@
+.departmentModalContent{
+    display: flex;
+    flex-direction: row;
+}
+
+.tasksContainer{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.tasksContainer h3{
+    margin:10px 0px;
+}
+
+
+.createTaskContainer{
+    display: flex;
+    gap: .3rem;
+}
+
+.createTaskContainer input{
+    flex: 1 1 auto;
+}
+
+.createTaskContainer button{
+    flex: 0 0 auto;
+}
+
+.taskContent{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    max-height: 400px;
+    overflow-y: auto;
+    gap: .4rem;
+    width: 100%;
+}
+

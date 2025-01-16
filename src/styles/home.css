@@ -1,0 +1,14 @@
+.homeScreen{
+    height: calc(100vh - var(--header-height));
+    width:100vw;
+    max-width: 1200px;
+    display: flex;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+@media (max-width: 750px) {
+    .homeScreen{
+        flex-direction: column;
+    }
+}

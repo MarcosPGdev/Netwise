@@ -1,0 +1,23 @@
+.abilitiesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    justify-content: center;
+    align-content: flex-start;
+    flex: 1 1 auto;
+    overflow: auto;
+  }
+
+.abilitiesContainer p{
+    background: var(--gradient-primary);
+    padding: .4rem;
+    font-weight: 500;
+    border-radius: 10px;
+    color: rgb(var(--color-white));
+    display: flex;
+    gap: .3rem;
+    margin: 0px;
+    height: fit-content;
+}

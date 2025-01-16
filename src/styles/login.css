@@ -1,0 +1,186 @@
+.loginScreen{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.loginBackground{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../public/images/login/wallpaper_login.jpg');
+    background-position: center;
+    background-size: cover;
+    place-content: center;
+    place-items: center;
+    box-shadow: 0px 0px 10px black;
+}
+
+.loginContainer{
+    height: fit-content;
+    width: 40%;
+    min-width: 400px;
+    max-height: 60%;
+    place-content: center;
+    place-items: center;
+    background-color: rgb(var(--color-white));
+    opacity:  97%;
+    border-radius: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.containerForm{
+    width: fit-content;
+    height: fit-content;
+    padding: .7rem 3rem;
+    box-sizing: border-box;
+    border-radius: .6rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 100%;
+    max-width: 700px;
+    width: 70%;
+    gap: 1rem;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.containerForm.fade-in {
+    opacity: 1;
+}
+
+.titleForm{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    font-weight: 800;
+    font-size: 2.2rem;
+}
+
+.containerInput{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+  
+.containerInput.login{
+    width: 100%;
+}
+
+.containerInput label {
+    font-size: .9rem;
+}
+
+.containerInput {
+    margin: 1rem;
+    width: calc(50% - 3rem);
+}
+
+.formButtonContainer{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.loginInput {
+    width: 100%;
+    background-color: rgb(var(--color-background));
+    border: none;
+    margin-top: .3rem;
+    padding: 10px;
+    box-sizing:border-box;
+    border-radius: 10px;
+    outline: none;
+    color: rgb(var(--color-black));
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Montserrat';
+}
+  
+.loginInput:focus {
+    background-color: rgb(var(--color-light-blue));
+    box-shadow: -2px -2px 8px 1px rgb(var(--color-primary)), 2px 2px 8px 1px rgb(var(--color-secondary));
+}
+
+.button {
+    position: relative;
+    border-radius: 50px;
+    background: rgb(var(--color-white));
+    border: 1px solid rgb(var(--color-secondary));
+    color: rgb(var(--color-secondary));
+    width: fit-content;
+    text-align: center;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    margin: 0.5rem 0rem;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.2s ease-in-out;
+    height: fit-content;
+}
+
+.button:hover {
+    color: rgb(var(--color-white));
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    z-index: -1;
+    transition: transform 0.2s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.button:hover::before {
+    transform: scaleX(1);
+}
+
+
+.registerOption{
+    color: var(--gradient-primary);
+    cursor: pointer;
+}
+
+.animated-gradient {
+    display: inline-block;
+    font-weight: bold;
+    background: var(--gradient-primary);
+    background-size: 400% 400%;
+    color: transparent;
+    -webkit-background-clip: text;
+    cursor: pointer;
+    animation: gradientAnimation 2s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (max-width: 1600px) {
+    .containerInput.register {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1050px) {
+    .titleForm {
+        font-size: 1.5rem;
+    }
+}

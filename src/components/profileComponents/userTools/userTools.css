@@ -1,0 +1,17 @@
+.userTools{
+    display: flex;
+    gap: 1rem;
+}
+
+.noneButton{
+    all:unset;
+    padding: .2rem .5rem;
+    box-sizing: border-box;
+    cursor:pointer;
+    transition: .1s ease-in-out;
+}
+
+.noneButton:hover svg{
+    transition: .1s ease-in-out;
+    transform: scale(1.1);
+}

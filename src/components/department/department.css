@@ -1,0 +1,18 @@
+.departmentContainer{
+    max-width: 400px;
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.departmentContainer:hover{
+    box-shadow: -2px -2px 8px 1px rgb(var(--color-primary)), 2px 2px 8px 1px rgb(var(--color-secondary));
+}
+
+.departmentContainer h3, .departmentContainer p {
+    margin: 5px 0px;
+}

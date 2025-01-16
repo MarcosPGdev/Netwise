@@ -1,0 +1,60 @@
+.barContainer{
+    width: 100%;
+    height: fit-content;
+    padding: 1rem 1rem 0rem 1rem;
+    box-sizing: border-box;
+}
+
+.userContent{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(var(--color-background));
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.userData{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.userData img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.userName{
+    font-weight: 700;
+    margin: 0px;
+}
+
+.profileSelectorContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.profileSelector{
+    padding: 1rem;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.selectorSelected{
+    border-bottom: 2px solid rgb(var(--color-primary));
+}
+
+.followerTool{
+    display: flex;
+    gap: 1rem;
+}
+
+@media(max-width:700px){
+    .profileSelectorContainer {
+       justify-content: start !important;
+       padding: 1rem;
+    }
+}

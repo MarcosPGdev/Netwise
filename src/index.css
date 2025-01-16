@@ -1,0 +1,237 @@
+:root {
+    font-family:'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+    --header-height:4rem;
+
+    /* ALL COLORS IN RGB*/
+    --color-background: 240, 244, 248;
+    --color-white: 255, 255 ,255;
+    --color-black: 0, 0 ,0;
+    --color-primary: 251, 111 ,111;
+    --color-secondary: 248, 159 ,64;
+    --gradient-primary: linear-gradient(135deg, rgb(var(--color-primary)), rgb(var(--color-secondary)));
+}
+
+body {
+    margin: 0;
+    display: flex;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+#root{
+    background-color: rgb(var(--color-background));
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgb(var(--color-background));
+    border-radius: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: 8px;
+  }
+  
+
+/* ESTILO DE ERROR DE FORMIK*/
+.error{
+    font-size: 0.7rem;
+    margin-left: .5rem;
+    color: red;
+}
+
+.screen{
+    width: 100vw;
+    place-items: center;
+}
+
+.module{
+    background-color: rgb(var(--color-white));
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px rgba(var(--color-black), .16);
+}
+
+
+.editButton{
+    all:unset;
+    background-color: rgb(var(--color-background));
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border-radius: 2rem;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+
+.editButton:hover{
+    background-color: rgb(var(--color-primary));
+    color: rgb(var(--color-white));
+}
+
+.closeButton{
+    all:unset;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border-radius: 2rem;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+    color: rgb(var(--color-white));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closeButton:hover{
+    background-color: rgb(var(--color-white));
+    color: rgb(var(--color-black));
+}
+
+.deleteButton{
+    all:unset;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+    color: rgb(var(--color-white));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50%;
+}
+
+.deleteButton:hover{
+    background-color: rgb(var(--color-white));
+    color: rgb(var(--color-black));
+}
+
+.containerModal{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    background-color: rgb(var(--color-black), .50);
+    z-index: 10;
+}
+
+.modal{
+    max-height: 70%;
+    height: fit-content;
+    position: absolute;
+    width: 79%;
+    background-color: rgb(var(--color-white));
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.modalHeader{
+    background: var(--gradient-primary);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modalHeader h2{
+    margin: 0px;
+    color: rgb(var(--color-white));
+}
+
+.modalForm {
+    padding: 2rem;
+    overflow: auto;
+    max-height: 30vh;
+}
+
+
+
+.input{
+    width: 100%;
+    background-color: rgb(var(--color-background));
+    border: none;
+    margin-top: .3rem;
+    padding: 10px;
+    box-sizing:border-box;
+    border-radius: 10px;
+    outline: none;
+    color: rgb(var(--color-black));
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Montserrat';
+}
+  
+.input:focus{
+    background-color: rgb(var(--color-light-blue));
+    box-shadow: -2px -2px 8px 1px rgb(var(--color-primary)), 2px 2px 8px 1px rgb(var(--color-secondary));
+}
+
+.selectContainer {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    height: fit-content;
+    justify-content: space-between;
+}
+
+.contentDisplay{
+    display:flex;
+    gap: 1rem;
+    height: fit-content;
+    flex-flow: wrap;
+    overflow-y: auto;
+    max-height: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 1rem;
+}
+
+.contentDisplay::-webkit-scrollbar {
+    display: none;
+}
+
+
+.actionDisplay{
+    display:flex;
+    height: fit-content;
+    padding: 1rem;
+}
+
+@media (min-width:750px){
+    .modalForm{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:750px){
+    .modalForm{
+        flex-direction: column;
+    }
+
+    .modalForm .containerInput{
+        width: 100%;
+        margin: 1rem 0rem;
+    }
+}

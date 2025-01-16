@@ -1,0 +1,38 @@
+.experienceCard{
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+    border: 1px solid rgb(var(--color-background));
+    padding: .5rem;
+    box-sizing: border-box;
+}
+
+.experienceHeader{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nameCard{
+    margin: 5px 0px;
+    font-weight: 600;
+    margin: 0px;
+    flex: 1 1 auto;
+}
+
+.paragraphCard{
+    margin: 5px 5px;
+    font-size: .85rem;
+}
+
+.experienceEditButton{
+    all:unset;
+    cursor: pointer;
+    color: rgb(var(--color-primary));
+    transition: .2s ease-in-out;
+}
+
+.experienceEditButton:hover{
+    transform: scale(1.1);
+}
